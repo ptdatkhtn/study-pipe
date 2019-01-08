@@ -4,9 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoggingService {
-
   constructor() { }
-  logging() {
-    console.log('Logging');
+  logging(amount: number) {
+    return amount + 10;
   }
+
 }

@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { LoggingService } from '../services/logging.service';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-first',
@@ -7,14 +6,15 @@ import { LoggingService } from '../services/logging.service';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit {
-
-  constructor(private _loggingService: LoggingService) {
+  @Input() number: number;
+  @Output() decrease = new EventEmitter<number>();
+  constructor() {
   }
 
   ngOnInit() {
   }
-  onClick() {
-    this._loggingService.logging();
+  decreaseNumber() {
+    this.decrease.emit(this.number);
   }
 
 }
