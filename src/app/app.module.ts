@@ -5,18 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { SortPipe } from './sort/sort.pipe';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+import { LoggingService } from './services/logging.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SortPipe
+    SortPipe,
+    FirstComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule
   ],
-  providers: [],
+  providers: [
+    LoggingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
