@@ -53,10 +53,10 @@
   </div>
   <div class="row">
     <div class="col-md-6">
-      <app-first [number]="amount" (decrease)="onClick()"></app-first>
+      <app-first [number]="amount" (decrease)="onClick($event)"></app-first>
     </div>
     <div class="col-md-6">
-      <app-second [number]="amount" (decrease)="onClick()"></app-second>
+      <app-second [number]="amount" (decrease)="onClick($event)"></app-second>
     </div>
   </div>
 </div>

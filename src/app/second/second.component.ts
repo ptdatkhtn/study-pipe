@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import { LoggingService } from '../services/logging.service';
 
 @Component({
   selector: 'app-second',
@@ -9,7 +8,7 @@ import { LoggingService } from '../services/logging.service';
 export class SecondComponent implements OnInit {
   @Input() number: number;
   @Output() decrease = new EventEmitter<number>();
-  constructor(private _loggingService: LoggingService) { }
+  constructor() { }
 
   ngOnInit() {
   }

@@ -18,7 +18,7 @@ export class AppComponent {
   constructor(private _decreaseAmount: LoggingService) {
 
   }
-  onClick() {
-    this.amount = this._decreaseAmount.logging(this.amount);
+  onClick(number) {
+    this.amount = this._decreaseAmount.logging(number);
   }
 }
